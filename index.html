@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Jet Ski</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="./images/logo.png" alt="logo Jet Ski">
+            <h1>Logo</h1>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="#"><img src="/ImgNavb/Home-icon.svg.png" alt="">
+                    <h1>HOME</h1></a></li>
+                <li><a href="#"><img src="./ImgNavb/Business-Shop-icon.png" alt="">
+                    <h2>SHOP</h2></a></li>
+                <li><a href="#"><img src="./ImgNavb/126083.png" alt="">
+                    <h3>PANIER</h3></a></li>
+                <li><a href="#"><img src="./ImgNavb/15895.png" alt="">
+                    <h4>CONTACT</h4></a></li>
+            </ul>
+            
+        </div>
+        <img src="./ImgNavb/menu.png" alt="menu hamburger" class="menu-hamburger">
+    </nav>
+    
+    <header></header>
+
+<section1 class="home">
+    <div>
+        <h1>THE BEST      JET SKI</h1>
+
+        </div>
+    <div id="caroussel">
+        <div class="image_caroussel">
+            <img src="images_caroussel/jetski1.jpg" height="250px" alt="jet ski 1">
+            <img src="images_caroussel/jetski2.jpg" height="250px" alt="jet ski 2">
+            <img src="images_caroussel/jetski3.jpg" height="250px" alt="jet ski 3">
+            <img src="images_caroussel/jetski4.jpg" height="250px" alt="jet ski 4">
+            <img src="images_caroussel/jetski5.jpg" height="250px" alt="jet ski 5">
+        </div>
+        
+   
+    </div>
+</section1>
+
+</body>
+<script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script>
+</html>

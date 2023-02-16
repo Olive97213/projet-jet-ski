@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@300;500&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+text-decoration: none;
+list-style: none;
+}
+
+body{
+     font-family:'Times New Roman', Times, serif, sans-serif;
+     background: url(./images_caroussel/arriere-plan-home.jpg) center/cover;
+     min-height: 100vh;
+    }
+header {
+height: 10vh;
+width: 100vW;
+background-image: url(./images/body.jpg);
+background-color: cover;
+
+}
+/**********début de la Navbar*******/
+.navbar {
+    background-color: rgba(189, 189, 5, 0.897);
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar a {
+    color: black;
+    display: flex;
+    word-spacing: 10%;
+    
+}
+.navbar .logo img {
+    width: 30px ;
+    height: 30px;
+    margin-right: 1rem;
+}
+.navbar .nav-links ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+    
+}
+.navbar .nav-links a img{
+    width: 30px;
+    height: 30px;
+}
+.navbar .nav-links ul li  h1, h2, h3, h4 {
+    display: none;
+}
+.navbar .nav-links ul li.active a {
+    color: red;
+    font-weight: 600;
+
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 35px;
+
+}
+
+/**********fin de la Navbar********/
+/*******************Responsive de la Navbar**********/
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+        color: aquamarine;
+    }
+    .navbar .logo {
+        position: absolute;
+        top: 40px;
+        left: 30px;   
+}
+    .navbar .menu-hamburger{
+        display: block;
+    }
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(170, 162, 175, 0.433);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.10s ease;
+    }
+    .navbar .nav-links a img{
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+
+    .navbar .nav-links ul li  h1, h2, h3, h4 {
+        display: block;
+        margin: 2rem;
+    }
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction:  column;
+        align-items: center;
+       
+
+    }
+}
+/*****************fin du responsive de la navbar************/
+/************Section page d'accueil*******/
+.home {
+
+    display: flex;
+    position;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    margin-right: 5%;
+    
+}
+.home h1 {
+    font-size: 5rem;
+    font-style: oblique;
+    margin-left: 30%;
+    font-weight: 200;
+    
+}
+
+#caroussel {
+    width: 400px;
+    overflow: hidden;
+    border: 2px solid black;
+    border-radius: 1em;
+    box-shadow: 10%;
+    
+  
+}
+
+.image_caroussel {
+    display: flex;
+    animation-duration: 20s;
+    animation-name: mesImages;   
+    animation-iteration-count: infinite ;
+    
+}
+
+@keyframes mesImages {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-360px);
+    }
+    40% {
+        transform: translateX(-720px);
+    }
+    60% {
+        transform: translateX(-1080px);
+    }
+    80% {
+        transform: translateX(-1440px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/**************fin de la page de section**********/
+/**********************Responsive de la page d'accueille**********/
+
+@media screen and (max-width: 900px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20%;
+    }
+    .home h1{
+        font-size: 3rem;
+        color: red;
+        margin-top: 30%;
+    }
+    #caroussel {
+        margin-top: 50%;
+        
+    }
+}
+@media screen and (max-width: 600px){
+    .home {
+        display: flex;
+        flex-direction: column;
+        margin-top: 7%;
+}
+.home h1{
+    font-size: 2rem;
+    color: red;
+    margin-top: 0%;}
+    #caroussel {
+        margin-top: 5%;
+    width: 300px;}
+}
