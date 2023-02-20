@@ -12,7 +12,7 @@ body{
      
     }
 header {
-height: 10vh;
+height: 100vh;
 width: 100vW;
 background-image: url(./images/body.jpg);
 background-color: cover;
@@ -21,7 +21,8 @@ background-color: cover;
 /**********début de la Navbar*******/
 .navbar {
     background-color: rgba(189, 189, 5, 0.897);
-    position: absolute;
+    position: relative;
+    z-index: 1;
     height: 10vh;
     padding: 20px;
     display: flex;
@@ -87,13 +88,15 @@ background-color: cover;
     .navbar {
         padding: 0;
         color: rgba(180, 174, 27, 0.753);
+        top: 0
     }
     .navbar .logo {
         position: absolute;
-        top: 40px;
+        top: 20px;
         left: 30px;   
 }
     .navbar .menu-hamburger{
+        top: 20px;
         display: block;
     }
     .nav-links{
@@ -117,7 +120,8 @@ background-color: cover;
 
     .navbar .nav-links ul li  h1, h2, h3, h4 {
         display: block;
-        margin: 2rem;
+        margin: 1rem;
+        font-size: 2em;
     }
     .nav-links.mobile-menu {
         margin-left: 0;
@@ -133,34 +137,33 @@ background-color: cover;
 /*****************fin du responsive de la navbar************/
 /************Section page d'accueil*******/
 .home {
-    background: url(./images_caroussel/arriere-plan-home.jpg);
+    background-image: url(images_caroussel/pexels-mudassir-ali-2300397_copie.png);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     z-index: -1;
     box-sizing: border-box;
-    min-height: 90vh;
     display: flex;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    margin-right: 5%;
-    
 }
 
 
 .home h1 {
     font-size: 5rem;
     font-style: oblique;
+    margin-bottom: 40%;
     margin-left: 30%;
-    font-weight: 200;
 }
 span {
     color: brown;
 }
 .span1 {
   margin-left: 5%;
+  margin-top: 5%;
 }
 .span2{
     margin-left: 40%;
@@ -171,8 +174,8 @@ span {
     overflow: hidden;
     border: 2px solid black;
     border-radius: 1em;
-    box-shadow: 10%;
     margin-right: 5%;
+    margin-bottom: 28%;
     
   
 }
@@ -207,22 +210,34 @@ span {
 }
 /**************fin de la page de section**********/
 /**********************Responsive de la page d'accueille**********/
+@media screen and (max-width: 1250px){
+   
+    
+    #caroussel{
+        margin-bottom: 30%;
+    }
+    .home h1{
+    
+        margin-left: 1px;}
+    }
 
 @media screen and (max-width: 900px) {
     .home {
         display: flex;
         flex-direction: column;
         margin-top: 0%;
+        overflow: hidden;
+
     }
     .home h1{
-        font-size: 3rem;
+        font-size: 4rem;
         color: red;
-        margin-top: 30%;
+        margin-top: 10%;
     }
     #caroussel {
-        min-height: 250px;
+        min-height: 200px;
         display: fixed;
-        margin-bottom: 60%;
+        margin-bottom: 0%;
         
     }
 }
@@ -233,20 +248,24 @@ span {
         margin-top: 0%;
 }
 .home h1{
-    font-size: 2rem;
+    font-size: 3rem;
     color: red;
-    margin-top: 0%;
+    margin-top: 8%;
 }
  #caroussel {
-        margin-bottom: 60%;
+        margin-bottom: 2%;
         width: 300px;
+        
 }
 }
 
 @media screen and (max-width: 500px){
- #caroussel {
-     margin-bottom: 100%;
-     width: 300px;
+   #caroussel {
+      height: 200px;
+      margin-bottom: 2%;
+      width: 290px;
+      align-items: center;
+     
     }
 }
 /****************section Jet Ski*************/
