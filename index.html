@@ -17,13 +17,13 @@
         </a>
         <div class="nav-links">
             <ul>
-                <li class="active"><a href="#"><img src="/ImgNavb/Home-icon.svg.png" alt="">
+                <li class="active"><a href="#caroussel"><img src="/ImgNavb/Home-icon.svg.png" alt="">
                     <h1>HOME</h1></a></li>
                 <li><a href="#sell"><img src="./ImgNavb/Business-Shop-icon.png" alt="">
                     <h2>SHOP</h2></a></li>
                 <li><a href="#"><img src="./ImgNavb/126083.png" alt="">
                     <h3>PANIER</h3></a></li>
-                <li><a href="#"><img src="./ImgNavb/15895.png" alt="">
+                <li><a href="#contact"><img src="./ImgNavb/15895.png" alt="">
                     <h4>CONTACT</h4></a></li>
             </ul>
             
@@ -118,6 +118,96 @@
         </div>
     </section>
     <!--/fin section jetski-->
+
+    <!--page contact-->
+    <section id="contact" class="section">
+        <video autoplay loop muted id="video-background">
+            <source src="projet-jet-ski/plage-seychelles-fond-d-ecran-animated-wallpaper.mp4" type="video/mp4">
+        </video>
+
+        <!--formulaire-->
+        <form id="form">
+            <label for="first-name" class="color">First Name <input class="case" id="first-name" name="first-name"
+                    type="text" required></label>
+
+            <label for="last-name" class="color">Last Name <input class="case" id="last-name" name="last-name"
+                    type="text" required></label>
+
+            <label for="email" class="color">Adresse Email <input class="case" id="email" name="email" type="email"
+                    required></label>
+
+            <label for="objet" class="color">Objet</label>
+
+            <select id="objet" name="objet" class="color">
+
+                <option value="">(select one jet ski)</option>
+                <option value="1">Jet ski 1</option>
+                <option value="2">Jet ski 2</option>
+                <option value="3">Jet ski 3</option>
+                <option value="4">Jet ski 4</option>
+                <option value="5">Jet ski 5</option>
+            </select>
+            <label for="area" class="color">Your message<textarea id=area name="area" rows="7" cols="20"
+                    placeholder=" Write here...."></textarea></label>
+
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+
+        <!--formulaire-->
+
+
+        <!--map-->
+        <div class="droite">
+
+            <div class="car">
+                <iframe id="maps"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.3181834027664!2d5.412047315479416!3d43.328530481382145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9bf97c6a188b5%3A0x26144d7cd0241160!2sAFPA!5e0!3m2!1sfr!2sfr!4v1675984998194!5m2!1sfr!2sfr"
+                    width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+            <!--map-->
+
+            <!--animation jet ski-->
+            <div class="jet-ski">
+                <img class="img-jet" src="projet-jet-ski/jet-ski-2.webp" alt="photo de jet ski">
+            </div>
+        </div>
+        <!--animation jet ski-->
+           
+    </section>
+    <!--footer-->
+    <footer id="footer">
+        <div class="copyright">
+            <img class="iconcopy" src="projet-jet-ski/copyright.webp" alt="logo copyright">
+        </div>
+        <div class="logosocial">
+            <a href="https://www.instagram.com/?hl=fr" target="_blank">
+            <ion-icon class="iconinsta iconsocial" name="logo-instagram"
+                alt="logo et lien vers instagram"></ion-icon></a>
+
+            <a href="https://twitter.com/?lang=fr" target="_blank">
+            <ion-icon class="icontwit iconsocial" target="_blank" name="logo-twitter"
+                alt="logo et lien vers twitter"></ion-icon></a>
+
+            <a href="https://fr-fr.facebook.com/" target="_blank">
+            <ion-icon class="iconface iconsocial" name="logo-facebook"
+                alt="logo et lien vers facebook"></ion-icon></a>
+
+            <a href="https://www.whatsapp.com/?lang=fr" target="_blank">
+            <ion-icon class="iconwhat iconsocial" name="logo-whatsapp"
+                alt="logo et lien vers whatsapp"></ion-icon></a>
+        </div>
+        <div class="back-up">
+        <a href="#"> <ion-icon name="arrow-up-outline" class="arrow"></ion-icon></a>
+        </div>
+    </footer>
+
+
+    <!--footer-->
+
+
+
+   
 </body>
 <script>
         const menuHamburger = document.querySelector(".menu-hamburger")
@@ -127,4 +217,6 @@
         navLinks.classList.toggle('mobile-menu')
         })
 </script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
